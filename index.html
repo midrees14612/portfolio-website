@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="icon" type="image/png" href="portfolio.png"/>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap');
+
+
+*{
+  font-family: 'Nunito', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; border:none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+
+}
+
+#home{
+    height: 100vh;
+  
+    background-image: url(design.png);
+    background-position: center;
+    background-size: cover;
+
+   
+ }
+.container{
+ 
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.header-text{
+    max-width:350px;
+    margin-top: 140px;
+}
+h1{
+    font-size: 40px;
+    color:white;
+    padding:.8rem 2.5rem;
+
+} 
+ h1:nth-child(1){
+ color: #eee;
+    -webkit-text-stroke:1px;
+
+ }
+ h1:nth-child(2){
+    color:  #f67c92;
+    animation: animate 4s ease-in-out infinite;
+
+ }
+ .square{
+    height: 12px;
+    width: 12px;
+    display: inline-block;
+    background:#f67c92; 
+    margin:15px 0; 
+
+}
+.common-btn{
+    
+    background:pink;
+    outline: none;
+   font-weight: bold;
+    cursor: pointer;
+     padding:.7rem 3rem;
+    margin-top: 1rem;
+    border-radius: 4rem;
+}
+.common-btn:hover{
+letter-spacing: 6px;
+}
+p{
+font-size: 15px;
+line-height: 18px;
+color:rgb(246, 246, 246);
+
+}
+.header-text button{
+    margin-top: 20px;
+    margin-bottom: 60px;
+
+}
+.line-1{
+    width: 15px;
+    height:15px;
+    background: #f67c92;
+    display: inline-block;
+}
+.line-2{
+    width: 80px;
+    height:1px;
+    background: #f67c92;
+    display: inline-block;
+}
+.line-3{
+    width: 60px;
+    height:1px;
+    background: #f67c92;
+    display: inline-block;
+}
+.line{
+    line-height: 8px;
+}
+
+
+
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar{
+    width:1.4rem;
+}
+
+html::-webkit-scrollbar-track{
+    background:#222;
+}
+
+html::-webkit-scrollbar-thumb{
+    background:#e5d6e9;
+}
+
+body{
+ 
+    background:linear-gradient(210deg,#033c51,#0b2b46,#214978,#143b5b);
+    background-size: 300% 300%;
+    animation: color 12s ease-in-out infinite;
+    overflow-x: hidden;
+    padding-left: 35rem;
+}
+@keyframes color{
+    0%{
+        background-position: 0 50%;}
+        50%{
+           background-position: 100% 50%;}  
+        
+         100%{
+           background-position: 0 50%;}  
+        
+}
+
+section{
+    min-height: 100vh;
+    padding:1rem;
+
+}
+
+.btn{
+    padding:.7rem 3rem;
+    background:pink;
+
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    border-radius: 4rem;
+
+}
+
+.btn i{
+    padding:0 .5rem;
+    font-size: 1.8rem;
+}
+
+
+
+header{
+    position: fixed;
+    top:0; left:0;
+    z-index: 1000;
+    height:100%;
+    width:25rem;
+    background:#f25f04;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+
+
+}
+
+
+
+header .user .name{
+    font-size: 3rem;
+    color:#fff;
+}
+
+header .user  img{
+    margin: auto;
+    border-radius: 60%;
+    -webkit-border-radius: 60%;
+    -moz-border-radius: 60%;
+    -ms-border-radius: 60%;
+    -o-border-radius: 60%;
+}
+
+header .user .post{
+    font-size: 2rem;
+    color:#eee;
+}
+
+header .navbar{
+    width:100%;
+}
+
+header .navbar ul{
+    list-style: none;
+    padding:1rem 3rem;
+}
+
+
+header .navbar ul li a{
+    display: block;
+    padding:1rem;
+    margin:1.5rem 0;
+    background:#032041;
+    color:#fff;
+    font-size: 2rem;
+    border-radius: 5rem;
+}
+
+header .navbar ul li a:hover{
+    background:#ececec;
+}
+
+
+
+#menu{
+    position: fixed;
+    top:2rem; right:2rem;
+    background:#333;
+    color:#fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    padding:1rem 1.5rem;
+    z-index: 1000;
+    display: none;
+}
+
+
+#about {
+    padding: 100px 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+
+.about-text{
+    max-width: 500px;
+    margin-right: 100px;
+    display: inline-block;
+}
+.about-text h2{
+    margin: 50px 0 10px;
+    font-size: 28px;
+    font-family: italic;
+}
+.about-text h3{
+    
+    font-size: 20px;
+    font-family: italic;
+    color: #797979;
+}
+ .course-right-col{
+    flex-basis: 30%;
+}
+.course-right-col  img{
+   
+     height:100%;
+    width:100%;
+    object-fit: cover;
+    border-radius: 40px;
+
+}
+.course-left-col{
+    flex-basis: 50%;
+}
+
+.education .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding:1rem 0;
+    padding-left: 3rem;
+}
+
+.education .box-container .box{
+    width:27rem;
+    margin:4rem 1rem;
+    padding-left: 4rem;
+    border-left: .2rem solid #fff;
+    position: relative;
+}
+
+.education .box-container .box span{
+    font-size: 1.3rem;
+    background:#222;
+    color:#fff;
+    border-radius: 5rem;
+    padding:.5rem 2.5rem;
+}
+
+.education .box-container .box h3{
+    font-size: 2rem;
+    color:#fff;
+    padding-top: 1.5rem;
+}
+
+.education .box-container .box p{
+    font-size: 1.4rem;
+    color:#eee;
+    padding: 1rem 0;
+}
+
+.education .box-container .box i{
+    position: absolute;
+    top:-1.5rem; left:-2.5rem;
+    height:5rem;
+    width: 5rem;
+    border-radius: 50%;
+    line-height: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    color:#ccc;
+    background:#c37d89;
+}
+
+.portfolio .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:2rem 0;
+}
+
+.portfolio .box-container .box{
+    height: 20rem;
+    width:26rem;
+    border-radius: 1rem;
+    margin:2rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.portfolio .box-container .box img{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+    border-radius: 40px;
+
+
+                
+                
+}
+
+
+.portfolio .box-container .box:hover img{
+    transform: scale(1.2);
+
+}
+
+.contact .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: 2px solid rgb(231, 231, 231); 
+}
+
+.contact .row .content{
+    flex:1 1 30rem;
+    padding:4rem;
+    padding-bottom: 0;
+
+}
+
+.contact .row form{
+    flex:1 1 45rem;
+    padding:2rem;
+    margin:2rem;
+    margin-bottom: 4rem;
+    
+}
+
+.contact .row form .box{
+    padding:1.5rem;
+    margin:1rem 0;
+    color:#03192b ;
+   
+    
+    text-transform: none;
+    font-size: 1.7rem;
+    width:100%;
+    border: 2px solid rgb(33, 245, 241); 
+     border-radius: 2rem;
+}
+
+.contact .row form .box::placeholder{
+    text-transform: capitalize;
+
+}
+
+.contact .row form .message{
+    height: 15rem;
+    resize: none;
+}
+
+.contact .row .content .title{
+    text-transform: uppercase;
+    color:rgb(0, 38, 83);
+    font-size: 3rem;
+    padding-bottom: 2rem;
+}
+
+.contact .row .content .info h3{
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color:#eee;
+    padding:1rem 0;
+    font-weight: normal;
+}
+.contact .row .content .title{
+    text-transform: uppercase;
+    color:#fff;
+    font-size: 3rem;
+    padding-bottom: 2rem;
+}
+
+.contact .row .content .info h3{
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color:#eee;
+    padding:1rem 0;
+    font-weight: normal;
+}
+
+.contact .row .content .info h3 img{
+    padding-right: 1rem;
+   
+}
+
+
+.contact .contact_us{
+    padding: 100px 0;
+}
+.contact .contact_us .item{
+    width: 25%;
+    height: 65px;
+    float: left;
+    box-shadow: 0 0 20px #002c47;
+    margin-left: 6%;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 12px;
+    border-radius: 15px ;
+   
+    display: block;
+}
+
+.top{
+    position: fixed;
+    bottom:7.5rem; right: 2rem;
+    z-index: 100;
+    display: none;
+}
+
+
+
+/* media queries  */
+
+@media (max-width:1200px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .home{
+        padding:1rem 4rem;
+    }
+
+}
+
+@media (max-width:991px){
+
+   header{
+       left:-120%;
+   }
+
+   #menu{
+       display: block;
+   }
+
+   header.toggle{
+    left:0%;
+   }
+
+   body{
+       padding:0;
+   }
+
+}
+
+@media (max-width:768px){
+
+    html{
+        font-size: 50%;
+    }
+ 
+ }
+
+@media (max-width:400px){
+
+    header{
+        width: 100vw;
+    }
+
+    .heading{
+        margin:0 3rem;
+    }
+
+    .about .row .counter .box{
+        width: 100%;
+    }
+ 
+    .education .box-container .box{
+        width:100%;
+    }
+
+    .portfolio .box-container .box{
+        width:100%;
+    }
+
+    .contact .row form{
+        margin:3rem 0;
+    }
+
+ }
+ .img {
+          
+            transition: transform 0.3s; /* Add a smooth transition effect */
+        }
+
+        /* Styles for the image on hover */
+        img:hover {
+            transform: scale(1.1); /* Increase the size by 10% on hover */
+        }
+</style>
+
+</head>
+<body >
+ <header>
+
+    <div class="user">
+        <img src="./Untitled design.png" height="100">
+       
+        <h3 class="name">Muhammad Idrees</h3>
+        <br>
+        <br>
+        <p class="post">Freelancer</p>
+    </div>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">home</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#education">education</a></li>
+            <li><a href="#Skills">Skills</a></li>
+            <li><a href="#portfolio">portfolio</a></li>
+            <li><a href="#contact">contact</a></li>
+
+        </ul>
+    </nav>
+
+ </header>
+
+ 
+<!-- header section ends -->
+
+<div id="menu" class="fas fa-bars"></div>
+
+
+
+
+
+      <section id="home">
+
+
+            <div class="container">
+
+               
+                <div class="header-text">
+                    <h1>HI THERE I AM MUHMAMMAD IDREES</h1>
+                    <br>
+                    
+                    <p>Hello, I'm Muhammad Idrees. Welcome to my portfolio, a showcase of my diverse skill set. As a front-end web developer, I transform static designs into dynamic, interactive experiences. My work in HTML, CSS, and JavaScript is about connecting people and ideas through the websites I create.
+
+                        In addition to web development, I'm also a Copywriter. I craft compelling narratives that engage and inspire, telling brand stories that resonate with audiences and drive action.
+                        
+                        As an Amazon Virtual Assistant, I guide you through the vast world of online shopping, specializing in product hunting and keyword searching to find the perfect products for you on Amazon.
+                        
+                        Lastly, as a Microsoft Office expert, I help you navigate through Word, Excel, and PowerPoint, making document creation and management a seamless process.
+                        
+                        Welcome to my world, where every pixel and every word tells a story.</p>
+
+                    <br>
+                    <button class="common-btn"> Read More </button>
+                    <div class="line">
+                        <span class="line-1"></span><br>
+                        <span class="line-2"></span><br>
+                        <span class="line-3"></span>
+                    </div>
+                    
+                </div>
+            </div>
+              
+          
+            
+        </section>
+       
+    
+<!-- header section starts  -->
+
+
+  
+
+
+
+<!-- about section starts  -->
+
+<section id="about">
+    
+    <div class="about-right-col">
+        <div class="about-text">
+            <h1>About Me</h1>
+                <span  class="square"></span>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae ex porro libero at veniam molestias facere quo necessitatibus ipsum ad?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae ex porro libero at veniam molestias facere quo necessitatibus ipsum ad?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.</p><br><br>
+            <div class="line">
+                        <span class="line-1"></span><br>
+                        <span class="line-2"></span><br>
+                        <span class="line-3"></span>
+                    </div>
+
+            <h2>"A university teacher cannot make you a Millionare they did't teach you how to make money.
+                Because they are broke learn from those how acheive succes in life." </h2>
+             
+          
+
+        </div>
+    </div>
+    <div class="course-right-col">
+        <a href="index2.html">
+        <img src="wp11484003.webp" alt="Andrew Tate" style="width:510px;height:450px;"></a>
+            </div>
+</section>
+
+
+
+<!-- about section ends -->
+<!-- education section starts  -->
+
+<section class="education" id="education">
+
+<h1> my education </h1>
+
+<div class="box-container" >
+
+   
+
+    <div class="box">
+        <i class="fas fa-graduation-cap"></i>
+        <span>2018</span>
+        <h3>front end development</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quos alias praesentium. Id autem provident laborum quae, distinctio eaque temporibus!</p>
+    </div>
+
+    <div class="box">
+        <i class="fas fa-graduation-cap"></i>
+        <span>2019</span>
+        <h3>front end development</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quos alias praesentium. Id autem provident laborum quae, distinctio eaque temporibus!</p>
+    </div>
+
+    <div class="box">
+        <i class="fas fa-graduation-cap"></i>
+        <span>2020</span>
+        <h3>front end development</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quos alias praesentium. Id autem provident laborum quae, distinctio eaque temporibus!</p>
+    </div>
+
+    <div class="box">
+        <i class="fas fa-graduation-cap"></i>
+        <span>2021</span>
+        <h3>front end development</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quos alias praesentium. Id autem provident laborum quae, distinctio eaque temporibus!</p>
+    </div>
+
+</div>
+
+</section>
+
+<!-- education section ends -->
+<!--skill section start-->
+<section class="education" id="Skills">
+
+    <h1> Skills </h1>
+    
+    <div class="box-container" >
+    
+       
+    
+        <div class="box">
+            
+            <h3>front end developer</h3>
+            <p>I'm a front-end web developer.
+                I specialize in transforming static designs into dynamic, interactive experiences using HTML, CSS, and JavaScript.
+                My work is about connecting people and ideas through the websites I create.
+                Welcome to my portfolio, where every pixel tells a story.</p>
+        </div>
+    
+        <div class="box">
+            
+          
+            <h3>copywritter</h3>
+            <p>As a Copywriter, I craft compelling narratives that engage and inspire. 
+                I tell brand stories that resonate with audiences and drive action. 
+                My words are not just meant to be read; they are designed to be felt and remembered.
+                Welcome to my portfolio, where every word tells a story.</p>
+        </div>
+    
+        <div class="box">
+          
+           
+            <h3>Amazon Virtual assistant</h3>
+            <p>I'm an Amazon Virtual Assistant, your personal guide in online shopping.
+                I excel in product hunting and keyword searching, ensuring you find the perfect products on Amazon. I can also assist with order tracking, 
+                price comparisons, and much more, providing a comprehensive shopping assistant service.
+                Welcome to a seamless shopping experience where your needs are my priority.</p>
+        </div>
+    
+        <div class="box">
+          
+            
+            <h3>Microsoft office expert</h3>
+            <p>As a Microsoft Office Assistant, I guide you through Word, Excel, and PowerPoint, 
+                helping you create and manage documents efficiently.
+                Welcome to a world where document creation is a seamless process, 
+                with your needs as my top priority.</p>
+        </div>
+    
+    </div>
+    
+    </section>
+    
+<!-- portfolio section starts  -->
+<section class="portfolio" id="portfolio">
+
+<h1 > my portfolio</h1>
+
+<div class="box-container">
+
+    <div class="box">
+        <img src="./IMG-20230701-WA0139.jpg" alt="">
+    </div>
+
+    <div class="box">
+        <img src="./IMG-20230701-WA0139.jpg" alt="">
+    </div>
+
+    <div class="box">
+        <img src="./IMG-20230701-WA0139.jpg" alt="">
+    </div>
+
+    <div class="box">
+        <img src="./IMG-20230701-WA0139.jpg" alt="">
+    </div>
+
+    <div class="box">
+        <img src="./IMG-20230701-WA0139.jpg" alt="">
+    </div>
+
+    <div class="box">
+        <img src="./IMG-20230701-WA0139.jpg" alt="">
+    </div>
+
+</div>
+
+
+</section>
+
+<!-- portfolio section ends -->
+
+
+
+
+
+
+<!-- contact section starts  -->
+
+<section class="contact" id="contact">
+
+
+
+<div class="row">
+
+    <div class="content">
+
+        <h3 class="title">contact info</h3>
+         <div class="info">
+            
+            <h3> <img src="./instagram (1).png">Instagram</h3>
+            <h3> <img src="./facebook (1).png">Facebook</h3>
+            <h3> <img src="./linkedin (1).png">Twitter </h3>
+            <h3> <img src="./twitter.png">Linkedin</h3>
+        </div>
+
+
+    </div>
+
+    <form action="">
+
+        <input type="text" placeholder="name" class="box">
+        <input type="email" placeholder="email" class="box">
+        <input type="text" placeholder="project" class="box">
+        <textarea name="" id="" cols="30" rows="10" class="box message" placeholder="message"></textarea>
+        <button type="submit" class="btn"> send <i class="fas fa-paper-plane"></i> </button>
+
+    </form>
+
+
+</div>
+<div class="contact_us">
+        <div class="item">
+         <h4><a href="tel:>+1234567890" target="_blank"style="color: #eee;">+923439122425</a></h4>
+        </div>
+        <div class="item" style="color:white;"><h4>
+             F8 ayub market islamabad
+        </h4></div>
+        <div class="item">
+   <h4> <a href="mailto:style@gmail.com"   target="_blank" style="color: #eee;">midrees14612@gmail.com</a> </h4>
+        </div>
+    </div>
+
+
+</section>
+
+<!-- contact section ends -->
+
+<!-- jquery cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</body>
+</html>
